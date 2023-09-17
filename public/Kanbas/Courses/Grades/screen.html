@@ -18,6 +18,10 @@
       </ul>
     </td>
     <td valign="top">
+      <select>
+        <option>Gradebook</option>
+        <option>Other Option</option>
+      </select>
       <button>Import</button>
       <select>
         <option>Export</option>
@@ -29,21 +33,27 @@
         <tbody>
           <tr>
             <td>
-              Student Names<br />
+              <h2>Student Names</h2>
               <input
                 title="Type the name of the student to search for"
                 placeholder="Search Students"
               />
+              <h2>Assignment Names</h2>
+              <input
+                      title="Type the name of the assignment to search for"
+                      placeholder="Search Assignments"
+              />
+              <br/>
+              <br />
+              <button>Apply Filters</button>
+
             </td>
-            <td>
-              Assignment Names<br />
-              <input />
-            </td>
+
           </tr>
         </tbody>
       </table>
 
-      <table width="100%">
+      <table border="1" width="100%">
         <thead>
           <tr>
             <th>Student Name</th>
@@ -74,7 +84,9 @@
         <tbody>
           <tr>
             <td>Alice Wonderland</td>
-            <td>100%</td>
+            <td><input type="text"
+                       id="text-fields-Alice-A1"
+                       value="80%"/></td>
             <td>100%</td>
             <td>100%</td>
             <td>100%</td>
@@ -99,6 +111,17 @@
           </tr>
           <tr>
             <td>Bob Builder</td>
+            <td><input type="text"
+                       id="text-fields-Bob-A1"
+                       value="50%"/></td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
             <td>100%</td>
             <td>100%</td>
             <td>100%</td>
@@ -114,6 +137,39 @@
           </tr>
           <tr>
             <td>Charlie Chaplin</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>Celine Ng</td>
+            <td><input type="text"
+                       id="text-fields-Celine-A1"
+                       value="99%"/></td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
             <td>100%</td>
             <td>100%</td>
             <td>100%</td>
