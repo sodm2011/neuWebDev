@@ -1,0 +1,140 @@
+<table border="1" width="100%">
+    <tr>
+        <td valign="top">
+            <ul>
+                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+            </ul>
+        </td>
+        <td valign="top">
+            <ul>
+                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+<!--                <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>-->
+                <li>
+                    <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                </li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+            </ul>
+        </td>
+        <td valign="top">
+            <a href="/Kanbas/Courses/Settings/screen.html">Course Details</a>
+            <a href="/Kanbas/Courses/Settings/settingNavigateScreen.html">Navigation</a>
+
+            <hr />
+
+                <h2>Course Details</h2>
+
+                <label>Name:</label>
+                <text>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</text><br /><br />
+
+                <label>Course Code:</label>
+                <text>CS4550 </text><br /><br />
+
+                <label for="blueprint-course">Blueprint Course:</label>
+                <select id="blueprint-course" name="blueprint-course">
+                    <option value="yes">Yes</option>
+                    <option value="no" selected>No</option>
+                </select><br><br>
+
+                <label for="course-template">Course Template:</label>
+                <input type="checkbox" id="course-template"/>Enable course as a Course Template<br><br>
+
+                <label for="time-zone">Time Zone:</label>
+                <select id="time-zone" name="time-zone">
+                    <option value="eastern" selected>Eastern Time (US & Canada)</option>
+                    <!-- Other time zones can be added here -->
+                </select><br><br>
+
+                <label>SIS ID:</label>
+            <text>CS4550.12631.202410</text><br /><br />
+
+            <label>Subaccount:</label>
+            <text>CS Undergrad</text><br /><br />
+
+            <label>Term:</label>
+            <text>202440 1 Fall 2023 Semester Full Term</text><br /><br />
+
+                <label for="participation">Participation:</label>
+                <select id="participation" name="participation">
+                    <option>Term</option>
+                </select><br />
+            Course participation is limited to term start and end dates.<br><br>
+
+            <label for="start-date">
+                Start
+            </label><br />
+            <input type="date"
+                   id="start-date"
+                   /><br/><br />
+            <label for="end-date">
+                End
+            </label><br />
+            <input type="date"
+                   id="end-date"
+                   /><br/><br/>
+                <input type="checkbox" id="restrict-before-term" name="restrict-before-term">
+                <label for="restrict-before-term">Restrict students from viewing course before term start date</label><br><br>
+
+                <input type="checkbox" id="restrict-after-term" name="restrict-after-term">
+                <label for="restrict-after-term">Restrict students from viewing course after term end date</label><br><br>
+
+                <label for="default-due-time">Default due time:</label>
+                <select id="default-due-time"><option>Account default (11:59pm)</option></select><br/>
+                <small>This influences the user interface for setting due dates.</small><br><br>
+
+            <label for="default-due-time-first">Default due time:</label>
+            <input type="text" id="default-due-time-first" name="default-due-time-first" placeholder="e.g. 11:59pm"><br><br>
+
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+                <option value="english" selected>English</option>
+            </select><br>
+            <small>This will override any user/system language preferences.</small><br><br>
+
+            <label for="file-storage">File Storage:</label>
+            <input type="text" id="file-storage" name="file-storage" value="10000 megabytes"><br><br>
+
+            <label for="large-course">Large Course:</label>
+            <input type="checkbox" id="large-course"/>Launch SpeedGrader Filtered by Student Group<br><br>
+
+            <label for="grading-scheme">Grading Scheme:</label>
+            <input type="checkbox" id="grading-scheme" name="grading-scheme" />Enable course grading scheme<br><br>
+
+            <label for="license">License:</label>
+            <select id="license" name="license">
+                <option value="private-copyrighted" selected>Private (Copyrighted)</option>
+            </select><br><br>
+
+            <label for="file-copyright">File Copyright:</label>
+            <input type="checkbox" id="file-copyright" />
+            Copyright and license information must be provided for files before they're published.
+            <br><br>
+
+            <label for="visibility">Visibility:</label>
+            If you need to make your course public pleae contact your administrator/support.
+            <select id="visibility" name="visibility">
+                <option value="public">Public</option>
+                <option value="private" selected>Private</option>
+            </select><br><br>
+
+            <label for="format">Format:</label>
+            <select id="format">
+                <option>On-Campus</option>
+
+            </select>
+            <label for="mastery-paths">Mastery Paths: </label>
+            <input type="checkbox" id="mastery-paths" name="mastery-paths">
+            <label for="mastery-paths">Enable individual learning paths for students based on assessment</label><br><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br><br>
+            <a href="#">more options</a>
+
+            <hr />
+            <button>Update Course Details</button>
+        </td>
+
+    </tr>
+</table>
