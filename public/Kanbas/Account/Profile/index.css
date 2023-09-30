@@ -42,3 +42,55 @@
     background-color: white;
     color: red;
 }
+
+/* Styles for AccountNavigatorSideBar */
+.AccountNavigatorSideBar ul {
+    padding: 10px; /* Padding around the entire list */
+    margin: 0; /* No external margin for the list */
+    width: 85px; /* Width of the sidebar */
+}
+
+.AccountNavigatorSideBar ul li {
+    list-style: none;
+    margin-bottom: 10px; /* Margin between list items */
+}
+
+.AccountNavigatorSideBar ul li a {
+    color: red; /* Text color */
+    text-decoration: none; /* Remove the underline from links */
+    padding: 5px; /* Padding around each link */
+    display: block; /* Makes the entire area clickable */
+}
+
+.AccountNavigatorSideBar ul li a.active {
+    color: black;
+}
+
+.AccountNavigatorSideBar ul li a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+.fas.fa-user {
+    top: 10px;
+    right: 10px; /* Positioned to the right */
+    color: grey; /* Updated color */
+    font-size: 90px;
+}
+
+/* Styles for the pencil icon */
+.fas.fa-pencil-alt {
+    color: grey; /* Updated color */
+}
+
+/* Updated styles for Edit Profile and Cancel Editing buttons with Bootstrap */
+.btn-outline-dark, .btn-outline-secondary {
+    margin: 5px;
+    padding: 5px;
+    color: white; /* To ensure the text is readable on the grey background */
+    background-color: grey;
+    border-color: grey; /* To match the background color */
+}
+
+.highlight {
+    color: red;
+}

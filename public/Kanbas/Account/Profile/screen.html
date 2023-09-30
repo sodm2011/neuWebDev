@@ -22,40 +22,46 @@
           <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
         </li>
         <li>
-          <i class="fas fa-user"></i>
+          <i class="fas fa-person"></i>
           <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
         </li>
       </ul>
     </td>
-    <td valign="top">
+    <td valign="top" class="AccountNavigatorSideBar">
       <p>Sophia Wu's Profile</p>
       <hr />
       <ul>
         <li><a href="#">Notifications</a></li>
-        <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+        <li><a href="/Kanbas/Account/Profile/screen.html" class="active">Profile</a></li>
         <li><a href="#">Files</a></li>
       </ul>
     </td>
-    <td>
+
+    <td style="position: relative;"> <!-- Added position:relative to ensure absolute positioning of child elements -->
       <table width="100%">
         <tr>
           <td align="right">
             <form action="/Kanbas/Account/Profile/EditProfile/screen.html">
-              <button>Edit Profile!!!!</button>
+              <button class="btn btn-outline-dark">
+                <i class="fas fa-pencil-alt"></i> Edit Profile
+              </button>
             </form>
           </td>
         </tr>
       </table>
+      <i class="fas fa-user"></i>
       <h2>Sophia Wu</h2>
+      <br/><br/>
 
       <h3>Contact</h3>
-      <p>No registered services, you can add some on the settings page</p>
+      <p>No registered services, you can add some on the <span class="highlight">settings</span> page</p>
+      <br/><br/>
 
       <h3>Biography</h3>
       <p>Student major in Computer Science Align</p>
 
       <h3>Links</h3>
-      <a href="#">Youtube</a>
+      <a href="https://www.youtube.com/watch?v=YzZz16Gtfdc&feature=youtu.be" class="highlight">Youtube</a>
     </td>
   </tr>
 </table>
