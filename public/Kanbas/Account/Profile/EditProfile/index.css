@@ -101,3 +101,14 @@
 .highlight {
     color: red;
 }
+
+.user-details {
+    float: left;
+    padding: 20px;
+}
+
+.edit-column {
+    width: 180px;
+    text-align: center;
+    padding: 20px;
+}
