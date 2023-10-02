@@ -78,32 +78,3 @@
 .AccountNavigatorSideBar ul li a:hover {
     text-decoration: underline; /* Underline on hover for better UX */
 }
-
-.fas.fa-user {
-    top: 10px;
-    right: 10px; /* Positioned to the right */
-    color: grey; /* Updated color */
-    font-size: 90px;
-}
-
-.btn.btn-border {
-    border: 1px solid black;
-}
-
-/* Styles for the pencil icon */
-.fas.fa-pencil-alt {
-    color: grey; /* Updated color */
-    font-size:20px;
-}
-
-/* Updated styles for Edit Profile and Cancel Editing buttons with Bootstrap */
-
-.highlight {
-    color: red;
-}
-
-.edit-column {
-    width: 180px;
-    text-align: center;
-    padding: 20px;
-}

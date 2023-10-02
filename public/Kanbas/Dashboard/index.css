@@ -1,0 +1,55 @@
+/* Black background for the sidebar */
+.sidebar {
+    width: 85px;
+    background-color: black;
+    padding: 0px;
+}
+
+.sidebar li {
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Change direction to vertical */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Styling icons */
+.fas,
+.fa-solid {
+    font-size: 40px;
+    color: red;
+    margin: 5px;
+}
+
+.fas.fa-tachometer-alt {
+    color: grey;
+}
+
+/* Non-selected link styles */
+.sidebar .icon-text-container {
+    color: white;
+    background-color: black;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    margin: 10px;
+}
+
+/* Selected link styles */
+.sidebar .icon-text-container.active {
+    background-color: white;
+    color: red;
+}
+
+/* Dashboard Course Cards */
+.course-card {
+    width: 250px;
+    margin: 20px 0; /* Only vertical margin */
+}
+
+.course-card .course-top {
+    height: 180px;
+}

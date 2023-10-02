@@ -52,18 +52,8 @@
       </ul>
     </td>
 
-    <td style="position: relative;"> <!-- Added position:relative to ensure absolute positioning of child elements -->
-      <table width="100%">
-        <tr>
-          <td align="right">
-            <form action="/Kanbas/Account/Profile/EditProfile/screen.html">
-              <button class="btn btn-light btn-border">
-                <i class="fas fa-pencil-alt"></i> Edit Profile
-              </button>
-            </form>
-          </td>
-        </tr>
-      </table>
+    <td valign="top"> <!-- Added position:relative to ensure absolute positioning of child elements -->
+
       <i class="fas fa-user"></i>
       <h2>Sophia Wu</h2>
       <br/>
@@ -77,6 +67,13 @@
 
       <h3>Links</h3>
       <a href="https://www.youtube.com/watch?v=YzZz16Gtfdc&feature=youtu.be" class="highlight">Youtube</a>
+    </td>
+    <td valign="top" class="edit-column">
+      <form action="/Kanbas/Account/Profile/EditProfile/screen.html">
+        <button class="btn btn-light btn-border">
+          <i class="fas fa-pencil-alt"></i> Cancel Editing
+        </button>
+      </form>
     </td>
   </tr>
 </table>
