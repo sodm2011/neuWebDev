@@ -1,0 +1,125 @@
+/* Black background for the sidebar */
+.sidebar {
+    width: 85px;
+    background-color: black;
+    padding: 0px;
+}
+
+.sidebar li {
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Change direction to vertical */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Styling icons */
+.fas,
+.fa-solid {
+    font-size: 40px;
+    color: red;
+    margin: 5px;
+}
+
+.fas.fa-tachometer-alt {
+    color: grey;
+}
+
+.fas.fa-ellipsis-v {
+    color: grey;
+}
+
+/* Non-selected link styles */
+.sidebar .icon-text-container {
+    color: white;
+    background-color: black;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    margin: 10px;
+}
+
+/* Selected link styles */
+.sidebar .icon-text-container.active {
+    background-color: white;
+    color: red;
+}
+
+/* Styles for AccountNavigatorSideBar */
+.AccountNavigatorSideBar {
+    padding-left:20px;
+    padding-right:20px;
+    width: 190px; /* Width of the sidebar */
+}
+
+.AccountNavigatorSideBar ul {
+    padding: 10px; /* Padding around the entire list */
+    margin: 0; /* No external margin for the list */
+}
+
+.AccountNavigatorSideBar ul li {
+    list-style: none;
+    margin-bottom: 20px; /* Margin between list items */
+}
+
+.AccountNavigatorSideBar ul li a {
+    color: red; /* Text color */
+    text-decoration: none; /* Remove the underline from links */
+    padding: 5px; /* Padding around each link */
+    display: block; /* Makes the entire area clickable */
+    text-align: left;
+}
+
+.AccountNavigatorSideBar ul li a.active {
+    color: black;
+    border-left: 2px solid black;
+    padding-left: 8px;
+}
+
+.AccountNavigatorSideBar ul li a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* On hover */
+.list-group-item-action:hover {
+    text-decoration: none;
+    background-color: #f8f9fa;  /* Slight change in background color on hover */
+}
+
+.list-group-item-action.ml-5 {
+    padding-left: 3rem !important; /* 3rem is the margin value for ml-5 in Bootstrap 5 */
+}
+
+/* Override Bootstrap's rounded corners */
+.list-group, .list-group-item {
+    border-radius: 0 !important;
+    width: 50%;
+}
+
+/* Subtext style for smaller font size */
+.list-group-item .subtext {
+    font-size: 0.85rem;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d; /* Keeping the default Bootstrap color for the divider */
+}
+
+.moduleDetails {
+    padding-left:20px;
+}
+
+.hyperLink {
+    color: red;
+    text-decoration: none;
+}
+
+.editable {
+    background-color: #f5f5f5; /* A light grey background */
+    border: 2px dashed #ccc; /* A dashed border */
+    cursor: pointer; /* A cursor that indicates the cell can be interacted with */
+}

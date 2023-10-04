@@ -1,167 +1,253 @@
-<table border="1" width="100%">
+<html>
+
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<table width="100%">
     <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+        <td rowspan="2" valign="top" class="d-none d-md-table-cell">
+            <!-- New Sidebar -->
+            <ul class="sidebar">
+                <li>
+                    <a href="/Kanbas/Account/Profile/screen.html" class="icon-text-container">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Account
+                    </a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Dashboard/screen.html" class="icon-text-container">
+                        <i class="fas fa-book"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Home/screen.html" class="icon-text-container active">
+                        <i class="fas fa-person"></i>
+                        Courses
+                    </a>
+                </li>
             </ul>
         </td>
-        <td valign="top">
+        <!-- Breadcrumb for the first row -->
+        <td colspan="3" valign="top">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">CS5610 - Web Development</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                </ol>
+            </nav>
+            <hr/>
+        </td>
+    </tr>
+
+    <tr>
+        <td valign="top" class="d-none d-md-table-cell AccountNavigatorSideBar">
+
             <ul>
                 <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-<!--                <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>-->
-                <li>
-                    <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-                </li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
                 <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+                <li><a href="/Kanbas/Courses/Settings/screen.html" class="active">Settings</a></li>
             </ul>
         </td>
+
         <td valign="top">
-            <a href="/Kanbas/Courses/Settings/screen.html">Course Details</a>
-            <a href="/Kanbas/Courses/Settings/settingNavigateScreen.html">Navigation</a>
+            <a href="/Kanbas/Courses/Settings/screen.html" class="hyperLink">Course Details</a>
+            <a href="/Kanbas/Courses/Settings/settingNavigateScreen.html" style="color: black">Navigation</a>
 
             <hr />
 
             <p>Drag and drop items to reorder them in the course navigation</p>
-            <table width="50%">
+            <table class="customTable mb-5">
                 <tr>
                     <td>Home</td>
                 </tr>
 
                 <tr>
-                    <td>Modules</td>
-                    <td>Control</td>
+                    <td>
+                        Modules
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Piazza</td>
-                    <td>Control</td>
+                    <td>
+                        Piazza
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Zoom Meetings</td>
-                    <td>Control</td>
+                    <td>
+                        Zoom Meetings
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Assignments</td>
-                    <td>Control</td>
+                    <td>
+                        Assignments
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Quizzes</td>
-                    <td>Control</td>
+                    <td>
+                        Quizzes
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Grades</td>
-                    <td>Control</td>
+                    <td>
+                        Grades
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>People</td>
-                    <td>Control</td>
+                    <td>
+                        People
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Panopto Video</td>
-                    <td>Control</td>
+                    <td>
+                        Panopto Video
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
             </table>
 
             <p>Drag items here to hide them from students</p>
-            <p>Disabling most pages will cause students who visit those pages to be redirected to the course home page</p>
-            <table width="50%">
+            <p style="font-size: 0.8rem">Disabling most pages will cause students who visit those pages to be redirected to the course home page</p>
+
+
+
+            <table class="customTable mb-5">
                 <tr>
-                    <td>Chat<br/>
-                    Page disabled. won't appear in navigation
+                    <td>
+                        Chat <br/>
+                        Page disabled. won't appear in navigation
+                        <i class="fa fa-ellipsis-v ellipsis-icon"></i>
                     </td>
-                    <td>Control</td>
                 </tr>
 
                 <tr>
-                    <td>SCORM<br/>
+                    <td>
+                        SCORM <br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                    <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
+
 
                 <tr>
                     <td>Attendance<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
+                    </td>
                 </tr>
 
                 <tr>
                     <td>Barnes and Noble Bookstore<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>Digication<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>Hot Hat<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>Campus Pack<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>McGraw-Hill Connect<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>Cengage<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>OneNote Class Notebook<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>MyLab and Mastering<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>Multi-Tool<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
+                        <i class="fa fa-ellipsis-v"></i>
                 </tr>
 
                 <tr>
                     <td>TurningPoint Registration<br/>
                         Page disabled. won't appear in navigation
-                    <td>Control</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <button>Save</button>
+                        <i class="fa fa-ellipsis-v"></i>
                     </td>
+
                 </tr>
+
             </table>
-
-
+            <button class="btn btn-danger">Save</button>
         </td>
-
     </tr>
+
 </table>
+
+</body>
+
+<style>
+    .customTable {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    .customTable, .customTable td {
+        border: 1px solid #ddd;
+    }
+
+    .customTable td {
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .customTable .fa {
+        margin-left: 10px;
+    }
+</style>
+
+</html>
