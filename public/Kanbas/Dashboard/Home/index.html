@@ -10,7 +10,7 @@
 
 <table width="100%">
     <tr>
-        <td valign="top">
+        <td rowspan="2" valign="top" class="d-none d-lg-table-cell">
             <!-- New Sidebar -->
             <ul class="sidebar">
                 <li>
@@ -32,29 +32,86 @@
                     </a>
                 </li>
             </ul>
-
         </td>
+        <!-- Breadcrumb for the first row -->
+        <td colspan="3" valign="top">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">CS5610 - Web Development</a></li>
+                    <li class="breadcrumb-item"><a href="#">Term1 - 2023</a></li>
+                    <li class="breadcrumb-item"><a href="#">Section 1</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+        </td>
+    </tr>
 
-        <td valign="top" class="AccountNavigatorSideBar">
-            <p>Sophia Wu's Profile</p>
-            <hr />
+    <tr>
+        <td valign="top" class="d-none d-lg-table-cell AccountNavigatorSideBar">
+
             <ul>
                 <li><a href="/Kanbas/Dashboard/Home/index.html" class="active">Home</a></li>
                 <li><a href="#">Modules</a></li>
                 <li><a href="#">Assignments</a></li>
-                <li><a href="#">Grades</a></li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
             </ul>
         </td>
 
         <td valign="top">
+            <div class="list-group mt-3">
+                <h5 class="list-group-item list-group-item-secondary">Week 1 - Introduction to the course</h5>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Learning Object
+                    <i class="fas fa-check text-success"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action ml-5">
+                    Introduction to the course
+                    <div class="float-end">
+                        <i class="fas fa-check text-success"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                     </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Learn what is web Development
+                    <i class="fas fa-plus text-danger"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
 
+                <h5 class="list-group-item list-group-item-secondary">Week 1 - Introduction to the course</h5>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Learning Object
+                    <i class="fas fa-check text-success"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Module 2
+                    <i class="fas fa-plus text-danger"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+            </div>
         </td>
 
-        <td valign="top">
+        <td valign="top" class="d-none d-md-table-cell">
+            <div class="list-group mt-3">
+                <h5 class="list-group-item list-group-item-secondary">Week 1 - Introduction to the course</h5>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Module 1
+                    <i class="fas fa-check text-success"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    Module 2
+                    <i class="fas fa-plus text-danger"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </a>
 
+
+            </div>
         </td>
-
     </tr>
+
 </table>
 
 </body>

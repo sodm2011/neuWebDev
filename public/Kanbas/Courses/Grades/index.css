@@ -26,6 +26,10 @@
     color: grey;
 }
 
+.fas.fa-ellipsis-v {
+    color: grey;
+}
+
 /* Non-selected link styles */
 .sidebar .icon-text-container {
     color: white;
@@ -79,13 +83,47 @@
     text-decoration: underline; /* Underline on hover for better UX */
 }
 
-.list-group-item-action {
-    color: red;
-    text-decoration: none;
-}
-
 /* On hover */
 .list-group-item-action:hover {
     text-decoration: none;
     background-color: #f8f9fa;  /* Slight change in background color on hover */
+}
+
+.list-group-item-action.ml-5 {
+    padding-left: 3rem !important; /* 3rem is the margin value for ml-5 in Bootstrap 5 */
+}
+
+/* Override Bootstrap's rounded corners */
+.list-group, .list-group-item {
+    border-radius: 0 !important;
+}
+
+/* Green border to the left of list items */
+.list-group-item {
+    border-left: 5px solid green !important;
+}
+
+/* Subtext style for smaller font size */
+.list-group-item .subtext {
+    font-size: 0.85rem;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d; /* Keeping the default Bootstrap color for the divider */
+}
+
+.moduleDetails {
+    padding-left:20px;
+}
+
+.hyperLink {
+    color: red;
+    text-decoration: none;
+}
+
+.editable {
+    background-color: #f5f5f5; /* A light grey background */
+    border: 2px dashed #ccc; /* A dashed border */
+    cursor: pointer; /* A cursor that indicates the cell can be interacted with */
 }
