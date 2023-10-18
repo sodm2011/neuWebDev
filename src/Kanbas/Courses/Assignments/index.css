@@ -1,6 +1,6 @@
 .assignment-list {
     margin: 0px;
-    border-left: 3px solid green;
+    border-left: 3px solid green !important;
     background-color: white !important;
     border-radius: 0;
 }

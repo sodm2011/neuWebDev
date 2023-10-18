@@ -1,0 +1,17 @@
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    position: absolute;
+    left: 8px;  /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; /* Color of the icon */
+}
+
+input {
+    padding-left: 30px; /* Space for the icon */
+}
+

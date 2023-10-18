@@ -3,7 +3,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faEllipsisV, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 
