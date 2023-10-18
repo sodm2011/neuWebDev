@@ -12,7 +12,7 @@ function Dashboard() {
     <div style={{ marginLeft: "30px"}}>
         <h3>Published Courses ({courses.length})</h3>
         <hr />
-        <div className="row">
+        <div className="course-container">
             {courses.map((course) => (
                 <div key={course._id} className="course-card"> 
                     <div className="course-top"></div>

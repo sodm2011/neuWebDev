@@ -1,0 +1,23 @@
+/* On hover */
+.list-group {
+    margin: 20px;
+}
+
+.list-group-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(247, 246, 246);
+    /* border: 1px solid grey !important; */
+    border-radius: 5px;
+}
+
+.list-group-item-moduleName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item:hover {
+    text-decoration: none;
+    background-color: #f8f9fa;  /* Slight change in background color on hover */
+}

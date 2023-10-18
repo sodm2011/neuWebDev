@@ -12,3 +12,9 @@
     background-color: blue;
     padding: 0px;
 }
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+}
