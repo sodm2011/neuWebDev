@@ -1,0 +1,16 @@
+.course-header {
+    display: flex;
+    align-items: center; /* vertically aligns items in the middle */
+    margin-top: 10px;
+  }
+  
+  .course-icon {
+    margin-right: 30px; 
+    color: red;
+  }
+  
+  .course-title {
+    color: red;
+    font-size: 20px;
+    margin: 0px;
+  }

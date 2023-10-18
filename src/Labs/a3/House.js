@@ -23,6 +23,7 @@ function House() {
         {house.bathrooms}
         <h3>Data</h3>
         <pre>{JSON.stringify(house, null, 2)}</pre>
+        
       </div>
     );
    }

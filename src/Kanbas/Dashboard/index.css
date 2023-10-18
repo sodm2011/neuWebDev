@@ -1,0 +1,14 @@
+/* Dashboard Course Cards */
+.course-card {
+    width: 250px;
+    margin: 20px; 
+    border: 1px solid black;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.course-top {
+    height: 180px;
+    background-color: blue;
+    padding: 0px;
+}

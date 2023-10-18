@@ -1,0 +1,23 @@
+.AccountNavigatorSideBar {
+    padding-right: 20px;
+    width: 190px;
+}
+
+.AccountNavigatorSideBar-link {
+    color: red;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px; /* margin for spacing between links */
+}
+
+.AccountNavigatorSideBar-link.active {
+    color: black;
+    border-left: 2px solid black;
+    padding-left: 8px;
+}
+
+.AccountNavigatorSideBar-link:hover {
+    text-decoration: underline;
+}
