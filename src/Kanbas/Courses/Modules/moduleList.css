@@ -6,7 +6,7 @@
 .list-group-item {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(247, 246, 246);
+    background: rgb(224, 221, 221) !important;
     /* border: 1px solid grey !important; */
     border-radius: 5px;
 }
@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 
-.list-group-item:hover {
+.list-group-item-module:hover {
     text-decoration: none;
-    background-color: #f8f9fa;  /* Slight change in background color on hover */
+    background-color: #fafafa;  /* Slight change in background color on hover */
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
-import "./index.css"
+import "./moduleList.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faEllipsisV, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
