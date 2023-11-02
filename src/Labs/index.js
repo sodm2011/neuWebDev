@@ -10,17 +10,16 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 function Labs() {
+
  return(
     <Provider store={store}>
      <div>
           <Nav/>
-          <h1>Assignment 3</h1>
           <TodoList/>
           <ConditionalOutput/>
           <Styles/>
           <Classes/>
           <Assignment3/>
-          <Assignment4/>
      </div>
     </Provider>
  )
