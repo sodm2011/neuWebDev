@@ -4,12 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faEllipsisV, faBook, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import db from "../../Database";
 import "./index.css"
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment, deleteAssignment, updateAssignment } from "./assignmentReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  // const assignments = db.assignments;
+  const assignments = useSelector(state => state.assignmentReducer.assignments);
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
+
+    const dispatch = useDispatch();
+
 
   return (
     <div>
@@ -20,9 +27,11 @@ function Assignments() {
           <button className="btn btn-light btn-sm me-1">
             <FontAwesomeIcon icon={faPlus} /> Group
           </button>
-          <button className="btn btn-danger btn-sm me-1">
-            <FontAwesomeIcon icon={faPlus} /> Assignment
-          </button>
+          <Link to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`} className="btn btn-light btn-sm me-1">
+            <button className="btn btn-danger btn-sm me-1">
+              <FontAwesomeIcon icon={faPlus} /> Assignment
+            </button>
+          </Link>
           <button className="btn btn-light btn-sm">
             <FontAwesomeIcon icon={faEllipsisV} />
           </button>
@@ -46,8 +55,8 @@ function Assignments() {
         </h5>
 
         {courseAssignments.map((assignment) => (
+          <div key={assignment._id}>
           <Link
-            key={assignment._id}
             to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
             className="list-group-item list-group-item-action d-flex align-items-center assignment-list">
             <FontAwesomeIcon icon={faBook} className="text-success me-2" style={{ fontSize: "24px" }} />
@@ -63,6 +72,16 @@ function Assignments() {
               <FontAwesomeIcon icon={faEllipsisV} className="ms-2" style={{ fontSize: "20px" }} />
             </div>
           </Link>
+          <button 
+            className="btn btn-danger btn-sm" 
+            onClick={() => {
+                dispatch(deleteAssignment(assignment._id)); 
+            }}
+        >
+            Delete 
+        </button>
+
+          </div>
         ))}
       </div>
     </div>
