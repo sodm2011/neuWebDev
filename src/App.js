@@ -5,6 +5,7 @@ import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import React from "react";
 import Assignment4 from "./Labs/a4";
+import Assignment5 from "./Labs/a5";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <Route path="/hello"    element={<HelloWorld/>}/>
           <Route path="/Labs/*"   element={<Labs/>}/>
           <Route path="/Labs/a4"   element={<Assignment4/>}/>
-
           <Route path="/Kanbas/*" element={<Kanbas/>}/>
+          <Route path="/Labs/a5"   element={<Assignment5/>}/>
         </Routes>
       </div>
     </HashRouter>
