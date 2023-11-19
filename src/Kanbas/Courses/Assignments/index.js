@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faEllipsisV, faBook, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import db from "../../Database";
 import "./index.css"
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, deleteAssignment, updateAssignment } from "./assignmentReducer";
+import { addAssignment, deleteAssignment, updateAssignment, setAssignments } from "./assignmentReducer";
+import { findAssignmentsForCourse, deleteAssignmentForCourse } from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
-  // const assignments = db.assignments;
-  const assignments = useSelector(state => state.assignmentReducer.assignments);
+  const courseAssignments = useSelector(state => state.assignmentReducer.assignments);
 
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+  const handleDeleteAssignment = (assignmentId) => {
+    deleteAssignmentForCourse(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
 
+
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+      );
+  }, [courseId]);
 
   return (
     <div>
@@ -75,7 +84,7 @@ function Assignments() {
           <button 
             className="btn btn-danger btn-sm" 
             onClick={() => {
-                dispatch(deleteAssignment(assignment._id)); 
+                dispatch(() => handleDeleteAssignment(assignment._id)); 
             }}
         >
             Delete 

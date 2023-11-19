@@ -1,53 +1,68 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import db from "../../../Database";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addAssignment, updateAssignment } from "../assignmentReducer";
+import { createAssignment } from "../client";
 
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
   
-  const assignment = useSelector(state => 
-    state.assignmentReducer.assignments.find(a => a._id === assignmentId)
-  ) || { 
-      title: "New Assignment",
-      description: "",
-      dueDate: "",
-      availableFromDate: "",
-      availableUntilDate: ""
+
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
+
+
+  const handleAddAssignment = () => {
+    console.log("get assignment", assignment)
+    const newAssignment = {
+        title: assignmentName,
+        description: description,
+        dueDate: dueDate,
+        availableFromDate: availableFromDate,
+        availableUntilDate: availableUntilDate,
+        course: courseId,
+        points: 0
+    };
+
+    createAssignment(courseId, newAssignment).then((newAssignment) => {
+      console.log("add times")
+      dispatch(addAssignment(newAssignment));
+    });
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+
   };
+
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSave = () => {
-    if (assignmentId === 'NewAssignment') {
-        const newAssignment = {
-            title: assignmentName,
-            description: description,
-            dueDate: dueDate,
-            availableFromDate: availableFromDate,
-            availableUntilDate: availableUntilDate,
-            course: courseId,
-            points: 0
-        };
-        dispatch(addAssignment(newAssignment));
-        console.log(newAssignment)
-    } else {
-        dispatch(updateAssignment({...assignment, title: assignmentName, 
-          description: description, dueDate: dueDate, 
-          availableFromDate: availableFromDate, 
-          availableUntilDate: availableUntilDate,
-        points: points}));
-        console.log(assignment)
-    }
-    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
-  };
+  // const handleSave = () => {
+  //   if (assignmentId === 'NewAssignment') {
+  //       const newAssignment = {
+  //           title: assignmentName,
+  //           description: description,
+  //           dueDate: dueDate,
+  //           availableFromDate: availableFromDate,
+  //           availableUntilDate: availableUntilDate,
+  //           course: courseId,
+  //           points: 0
+  //       };
+  //       dispatch(addAssignment(newAssignment));
+  //       console.log(newAssignment)
+  //   } else {
+  //       dispatch(updateAssignment({...assignment, title: assignmentName, 
+  //         description: description, dueDate: dueDate, 
+  //         availableFromDate: availableFromDate, 
+  //         availableUntilDate: availableUntilDate,
+  //       points: points}));
+  //       console.log(assignment)
+  //   }
+  //   navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  // };
 
   const [points, setPoints] = useState(assignment.points);
   const [assignmentName, setAssignmentName] = useState(assignment.title);
@@ -81,9 +96,6 @@ function AssignmentEditor() {
                     />
                 </div>
             </div>
-
-
-        
         <div className="row mb-3">
         <label htmlFor="description" className="col-sm-12 col-form-label">Description</label>
         <div className="col-sm-12">
@@ -157,7 +169,7 @@ function AssignmentEditor() {
             <Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-light">
             Cancel
             </Link>
-            <button onClick={handleSave} className="btn btn-danger me-2">
+            <button onClick={handleAddAssignment} className="btn btn-danger me-2">
                 Save
             </button>
         </div>
