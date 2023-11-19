@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import store from './store';
 import { Provider } from "react-redux";
 import axios from 'axios';
+import { applyMiddleware } from 'redux';
 
 function Kanbas() {
 
@@ -15,8 +16,11 @@ function Kanbas() {
     name: "New Course",      number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
   });
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  console.log("get API_BASE", API_BASE)
+  const URL = `${API_BASE}api/courses`;
 
-  const URL = "http://localhost:4000/api/courses";
+  // const URL = "https://kanbas-node-server-app-ftsx.onrender.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
