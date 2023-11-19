@@ -14,3 +14,34 @@
     font-size: 20px;
     margin: 0px;
   }
+
+  .course-details {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .course-title {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .course-meta span {
+    background-color: #e7e7e7;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .course-description h3 {
+    margin-bottom: 5px;
+  }
+  

@@ -5,7 +5,7 @@ import Status from "./Status";
 function Home() {
   return (
     <div style={{display: "flex"}}>
-      <ModuleList />
+      {/* <ModuleList /> */}
       <Status/>
     </div>
   );
