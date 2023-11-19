@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import db from "../Database";
 import "./index.css"
 
 function Dashboard({ courses, course, setCourse, addNewCourse,
@@ -15,7 +14,6 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
     <div style={{ marginLeft: "30px"}}>
         <h3>Published Courses ({courses.length})</h3>
         <hr />
-
          
         <input value={course.name} className="form-control"
              onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
@@ -27,13 +25,13 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
              onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
 
         <button className="btn btn-success" onClick={addNewCourse} >Add</button>
-        <button className="btn btn-success" onClick={updateCourse} >Update</button>
+        <button className="btn btn-success" onClick={() => updateCourse(course)} >Update</button>
 
 
 
         <div className="list-group">
         {courses.map((course) => (
-          <Link key={course._id}
+          <Link key={course}
                 to={`/Kanbas/Courses/${course._id}`}
                 className="list-group-item">
             {course.name}
@@ -48,7 +46,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
             <button className="btn btn-danger"
               onClick={(event) => {
                 event.preventDefault();
-                deleteCourse(course._id);
+                deleteCourse(course);
               }}>
               Delete
             </button>
