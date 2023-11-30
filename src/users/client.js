@@ -5,6 +5,8 @@ const request = axios.create({
 
 export const BASE_API = process.env.REACT_APP_API_BASE;
 export const USER_API = `${BASE_API}/api/users`;
+console.log("get api base from env var: ", BASE_API);
+console.log("get user api base from env var: ", USER_API);
 
 
 export const signIn = async (credientials) => {
@@ -32,6 +34,7 @@ export const createUser = async (user) => {
 
 export const findUserById = async (id) => {
     const response = await request.get(`${USER_API}/${id}`);
+    console.log("find user by id the path", `${USER_API}/${id}`);
     return response.data;
 }
 

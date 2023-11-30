@@ -11,6 +11,7 @@ function Account() {
 
   const findUserById = async (id) => {
     const user = await client.findUserById(id);
+    console.log("find user by id", user)
     setAccount(user);
   };
 
@@ -30,8 +31,10 @@ function Account() {
   useEffect(() => {
     if (id) {
       findUserById(id);
+      console.log("find user by id", id)
     } else {
     fetchAccount();
+    console.log("fetch account")
     }
   }, []);
   return (
