@@ -19,7 +19,6 @@ function App() {
           <Route path="/Labs/a4"   element={<Assignment4/>}/>
           <Route path="/Kanbas/*" element={<Kanbas/>}/>
           <Route path="/Labs/a5"   element={<Assignment5/>}/>
-          <Route path="/Kanbas/admin/users" element={<UserTable />}/>
         </Routes>
       </div>
     </HashRouter>

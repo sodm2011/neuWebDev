@@ -22,6 +22,7 @@ function Kanbas() {
   });
   const API_BASE = process.env.REACT_APP_API_BASE;
   const URL = `${API_BASE}/api/courses`;
+  console.log("get api base from env var: ", API_BASE);
 
   // const URL = "https://kanbas-node-server-app-ftsx.onrender.com/api/courses";
   const findAllCourses = async () => {
