@@ -8,14 +8,10 @@ export const USER_API = `${BASE_API}/api/users`;
 
 export const signIn = async (credientials) => {
     const response = await request.post(`${USER_API}/signin`, credientials);
-    console.log("get request in sign in", request)
     return response.data;
 }
 export const account = async () => {
     const response = await request.post(`${USER_API}/account`);
-    console.log("get request in account", request)
-    console.log("get api base from env var: ", BASE_API);
-    console.log("get user api base from env var: ", USER_API);
     return response.data;
 }
 export const updateUser = async (user) => {

@@ -11,13 +11,11 @@ function Account() {
 
   const findUserById = async (id) => {
     const user = await client.findUserById(id);
-    console.log("find user by id", user)
     setAccount(user);
   };
 
   const fetchAccount = async () => {
     const account = await client.account();
-    console.log("fetch account", account)
     setAccount(account);
   };
   const save = async () => {
@@ -32,10 +30,8 @@ function Account() {
   useEffect(() => {
     if (id) {
       findUserById(id);
-      console.log("find user by id", id)
     } else {
     fetchAccount();
-    console.log("fetch account")
     }
   }, []);
   return (
