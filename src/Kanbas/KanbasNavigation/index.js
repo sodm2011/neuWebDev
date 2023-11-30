@@ -10,6 +10,8 @@ function KanbasNavigation() {
     { name: "Account", icon: faUser },
     { name: "Dashboard", icon: faTachometerAlt },
     { name: "Courses", icon: faBook},
+    { name: "signin", icon: faBook},
+    { name: "signup", icon: faBook},
 ];
   const { pathname } = useLocation();
   return (
