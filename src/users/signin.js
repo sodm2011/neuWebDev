@@ -10,6 +10,7 @@ function SignIn() {
     const navigate = useNavigate();
     const signIn = async () => {
         const user = await client.signIn(credientials);
+        console.log("in signin get user", user);
         if (user) {
             navigate('../account');
         }
